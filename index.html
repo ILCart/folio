@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"  type="module"></script>
+    <script src="app.js" type="module"></script>
 </head>
+
 <body>
+    <nav class="flex">
+        <section class="flex">
+            <a href="about-me.html" class="btn">about me</a>
+            <a href="projects.html" class="btn">projects</a>
+            <a href="#" class="active btn">home</a>
+
+        </section>
+    </nav>
     <main>
         <header class="flex">
-           <section class="flex">
+            <section class="flex">
                 <img src="assets/name.svg" alt="Hi, I am Isaac Lay" id="headmain">
-                <p><strong>Developer</strong> for the <em>web</em>. Always learning. This is <strong><em>my portfolio.</em></strong></p>
-           </section>
+                <p>A <strong>developer</strong> for the <em>web</em>. This is <strong><em>my portfolio.</em></strong>
+                </p>
+            </section>
             <section class="flex column">
-                
+
                 <h2 id="Scroll">
                     Scroll
                 </h2>
@@ -22,11 +33,64 @@
             </section>
         </header>
 
-        <section id="projects">
-            <section >
-                <h2 class="prjct-ttl">Jurassic Park|<br> Prehistoric Pours</h2>
+        <section id="projects" class="flex">
+            <section class="ttl flex prjcrd" data-type="website">
+                <img src="" alt="Prehistoric Pours" class="prjcrdbg">
+                <h2 class="prjct-ttl">Jurassic Park|</h2>
+                <h2 class="prjct-ttl">Prehistoric Pours</h2>
+
+            </section>
+            <section class="ttl flex prjcrd" data-type="website">
+                <img src="" alt="Budget Calculator" class="prjcrdbg">
+                <h2 class="prjct-ttl">EECU|</h2>
+                <h2 class="prjct-ttl">Budget Calculator</h2>
+
+            </section>
+            <section class="ttl flex prjcrd" data-type="website">
+                <img src="" alt="Digital Boardgame" class="prjcrdbg">
+                <h2 class="prjct-ttl">Digital Boardgame|</h2>
+                <h2 class="prjct-ttl">Titan's Legacy</h2>
+
             </section>
         </section>
+
+        <section id="abt-me">
+            <section>
+                <h3 class="caps plyfrdspy">About Me</h2>
+                    <p>I spend my time around <strong>technology</strong></p>
+            </section>
+            <img src="" alt="picture of me">
+        </section>
+        <section id="resume">
+            <h3 class="caps plyfrdspy">I am a <strong>developer</strong></h2>
+                <p>I make <em>responsive</em> websites and <em>interactive</em> prototypes.</p>
+                <section class="hscroller">
+                    <p>css | html | figma | javascript | responsive design | uxd |</p>
+                </section>
+
+        </section>
+        <section id="cntc">
+            <h2>Get in <em>contact</em></h2>
+            <hr>
+            <section id="cntcs" class="flex">
+                <section class="contact-item flex">
+                    <img src="" alt="email">
+                    <p>isaac.lay25@gmail.com</p>
+                </section>
+                <section class="contact-item flex">
+                    <img src="" alt="github">
+                    <p>isaac.lay25@gmail.com</p>
+                </section>
+            </section>
+        </section>
+        <footer class="flex column">
+            <h2 class="plyfrdspy">
+                <strong>Thanks</strong> for visiting!
+            </h2>
+            <h3>back to the top</h3>
+            <img src="" alt="up arrow">
+        </footer>
     </main>
 </body>
+
 </html>
