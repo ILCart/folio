@@ -4,6 +4,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: 100%;
 }
 *{
     box-sizing: border-box;
@@ -26,6 +27,47 @@
 header{
     width: 100%;
     height: 100dvh;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#herocta{
+    width: 100%;
+    align-items: center;
+}
+#herocta > h2{
+    font-weight: 100;
+    font-size: 7rem;
+}
+#hero-text{
+    align-items: center;
+}
+#hero-text > p{
+    padding: 5rem;
+    font-size: 1.2rem;
+}
+.prjct-ttl{
+    font-weight: 200;
+}
+.prjcrd{
+    position: relative;
+}
+.prjcrdbg{
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.caps{
+    text-transform: uppercase;
+
+}
+.btn{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
 }
 /* Reusables */
 .flex{
@@ -50,27 +92,3 @@ h3{
     font-size: 3.75rem
 }
 
-.ttl{
-}
-.prjct-ttl{
-    font-weight: 200;
-}
-.prjcrd{
-    position: relative;
-}
-.prjcrdbg{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-.caps{
-    text-transform: uppercase;
-
-}
-.btn{
-    text-decoration: none;
-}
-img{
-    max-width: 100%;
-}
