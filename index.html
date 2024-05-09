@@ -9,8 +9,9 @@
 </head>
 
 <body>
+
     <nav class="flex">
-        <section class="flex">
+        <section class="flex" id="directory">
             <a href="about-me.html" class="btn">about me</a>
             <a href="projects.html" class="btn">projects</a>
             <a href="#" class="active btn">home</a>
@@ -40,35 +41,34 @@
         </header>
         <!-- I need to connect this in the js or find some way later using css -->
         <section id="projects" class="flex">
-            <section class="ttl caps flex prjcrd"data-file="prehistoric-pours.html">
-                <img src="assets/projects/prepour-home.png" alt="Prehistoric Pours" class="prjcrdbg">
-                <section class="flex ttlcontainer">
-                    <h2 class="prjct-ttl">Jurassic Park</h2>
-                    <h2 class="prjct-ttl">Prehistoric Pours</h2>
+            <section class="ttl caps flex prjcrd" data-file="prehistoric-pours.html" data-bg="assets/projects/prepour-home.png">
+                <section class="flex ttlcontainer column">
+                    <p class="project-title">Prehistoric Pours</p>
+                    <p class="project-title">Jurassic Park</p>
                 </section>
 
             </section>
-            <section class="ttl caps flex prjcrd"data-file="eecu.html">
-                <img src="assets/projects/eecu-breakdown.png" alt="Budget Calculator" class="prjcrdbg">
-                <section class="flex ttlcontainer">
+            <section class="ttl caps flex prjcrd"data-file="eecu.html"  data-bg="assets/projects/eecu-breakdown.png">
+                <section class="flex ttlcontainer column">
 
-                    <h2 class="prjct-ttl">EECU</h2>
-                    <h2 class="prjct-ttl">Budget Calculator</h2>
+                    <p class="project-title">Budget Calculator</p>
+                    <p class="project-title">EECU</p>
+
                 </section>
             </section>
-            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html">
-                <img src="assets/projects/tl2.png" alt="Digital Board Game" class="prjcrdbg">
-                <section class="flex ttlcontainer">
-                    <h2 class="prjct-ttl">Digital Board Game</h2>
-                    <h2 class="prjct-ttl">Titan's Legacy</h2>
+            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html"  data-bg="assets/projects/tl2.png">
+                <section class="flex ttlcontainer column">
+                    <p class="project-title">Titan's Legacy</p>
+                    <p class="project-title">Digital Board Game</p>
+
                 </section>
 
             </section>
-            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html">
-                <img src="" alt="jurassic park essay" class="prjcrdbg">
-                <section class="flex ttlcontainer">
-                    <h2 class="prjct-ttl">Jurassic Park</h2>
-                    <h2 class="prjct-ttl">APA Essay</h2>
+            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html"  data-bg="">
+                <section class="flex ttlcontainer column">
+                    <p class="project-title">APA Essay</p>
+                    <p class="project-title">Jurassic Park</p>
+
                 </section>
 
             </section>
@@ -84,10 +84,17 @@
         <section id="resume" class="flex">
             <h3 class="caps plyfrdspy">I am a <strong>developer</strong></h2>
                 <p>I make <em>responsive</em> websites and <em>interactive</em> prototypes.</p>
-                <section class="hscroller flex caps">
+                <section class="hscroller flex caps nw">
                     <!-- this gonna be scrolling across screen -->
                     <p>| css | html | figma | javascript | responsive design | uxd |</p>
+                    <p>css | html | figma | javascript | responsive design | uxd |</p>
+
+                </section>
+                <section class="hscroller flex caps nw">
+                    <!-- this gonna be scrolling across screen -->
                     <p>| css | html | figma | javascript | responsive design | uxd |</p>
+                    <p>css | html | figma | javascript | responsive design | uxd |</p>
+
                 </section>
 
         </section>

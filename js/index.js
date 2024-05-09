@@ -11,19 +11,18 @@ let jumpyloopy = (dt)=>{
 }
 
 //Redirect a clickable element to a file
-function redirect_to_project(clickable,file){
-    clickable.addEventListener("click",()=>{
-        open(`../projects/${file}`);
-    })
+function change_bg(clickable,file){
+    clickable.style.backgroundImage = `url(${file})`;
 }
 //Link a list of projects (elements) to the file
-function link_projects(projects){
+function set_projects_bg(projects){
     for (const project of projects) {
-        if(project.dataset.file){
-            redirect_to_project(project,project.dataset.file);
+        if(project.dataset.bg){
+            change_bg(project,project.dataset.bg);
         }
     }
 }
+
 
 function iocallback(targets){
     targets.forEach(target=>{
@@ -36,6 +35,7 @@ function iocallback(targets){
     })
 }
 
+
 document.addEventListener("DOMContentLoaded",()=>{
     // jumpyloopy(0);
     
@@ -46,6 +46,10 @@ document.addEventListener("DOMContentLoaded",()=>{
         observer.observe(project);
     })
     if(projects){
-        link_projects(projects.children);
+        set_projects_bg(projects.children);
     }
+})
+
+document.addEventListener("scroll",e=>{
+    console.log(e)
 })
