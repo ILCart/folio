@@ -1,55 +1,51 @@
-let jumpyloopy = (dt)=>{
-       
+let jumpyloopy = (dt) => {
+
     requestAnimationFrame(jumpyloopy)
     let scroll = document.getElementById("scroll");
     let x = [...scroll.children];
     x.forEach(child => {
-        child.style.transform = `translateY(${(dt/100)%10}%) rotate(${Math.random()*90}deg)`;
+        child.style.transform = `translateY(${(dt / 100) % 10}%) rotate(${Math.random() * 90}deg)`;
     });
 
 
 }
 
 //Redirect a clickable element to a file
-function change_bg(clickable,file){
+function change_bg(clickable, file) {
     clickable.style.backgroundImage = `url(${file})`;
 }
 //Link a list of projects (elements) to the file
-function set_projects_bg(projects){
+function set_projects_bg(projects) {
     for (const project of projects) {
-        if(project.dataset.bg){
-            change_bg(project,project.dataset.bg);
+        if (project.dataset.bg) {
+            change_bg(project, project.dataset.bg);
         }
     }
 }
 
 
-function iocallback(targets){
-    targets.forEach(target=>{
-        if(target.isIntersecting){
-            target.target.classList.toggle("hidden",false);
-        }else{
-            target.target.classList.toggle("hidden",true);
- 
+function iocallback(targets) {
+    targets.forEach(target => {
+        if (target.isIntersecting) {
+            target.target.classList.toggle("hidden", false);
+        } else {
+            target.target.classList.toggle("hidden", true);
+
         }
     })
 }
 
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
     // jumpyloopy(0);
-    
+
     let observer = new IntersectionObserver(iocallback);
     let projects = document.getElementById("projects");
-    [...projects.children].forEach(project=>{
-        project.classList.toggle("hidden",true);
+    [...projects.children].forEach(project => {
+        project.classList.toggle("hidden", true);
         observer.observe(project);
     })
-    if(projects){
+    if (projects) {
         set_projects_bg(projects.children);
     }
-})
-
-document.addEventListener("scroll",e=>{
-    console.log(e)
 })
