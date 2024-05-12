@@ -28,9 +28,6 @@ function iocallback(targets) {
     targets.forEach(target => {
         if (target.isIntersecting) {
             target.target.classList.toggle("hidden", false);
-        } else {
-            target.target.classList.toggle("hidden", true);
-
         }
     })
 }

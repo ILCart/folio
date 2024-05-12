@@ -10,24 +10,32 @@
 
 <body id="top">
 
-    <nav class="flex">
+    <nav class="flex neon">
         <section class="flex" id="directory">
-            <a href="about-me.html" class="btn">about me</a>
-            <a href="projects.html" class="btn">projects</a>
-            <a href="#" class="active btn">home</a>
+            <a href="#" class="active btn navbtn">home</a>
+            <a href="about-me.html" class="btn navbtn">about me</a>
+            <section class="navbtn btn flex column nw" id="containdrop">
+                <a href="projects.html" id="projectsnav" class="btn column flex">projects</a>
+                <section id="projects-drop" class="flex column nw">
+                    <a class="btn" href="#">P1</a>
+                    <a class="btn" href="#">P2</a>
+                    <a class="btn" href="#">P3</a>
+                    <a class="btn" href="#">P4</a>
+                </section>
+            </section>
 
         </section>
     </nav>
     <main>
-        <header class="flex">
-            <section class="flex" id="hero-text">
-                <img src="assets/name.svg" alt="Hi, I am Isaac Lay" id="headmain">
+        <header class="flex column">
+            <section class="flex column" id="hero-text">
+                <img src="assets/name.svg" alt="Hi, I am Isaac Lay" id="headmain" class="neon">
                 <p>A <strong>developer</strong> for the <em>web</em>. This is <strong><em>my portfolio.</em></strong>
                 </p>
             </section>
-            <section class="flex column" id="herocta">
+            <section class="flex column neon" id="herocta">
 
-                <section id="scroll" class="caps">
+                <section id="scroll" class="caps ">
                     <span>s</span>
                     <span>c</span>
                     <span>r</span>
@@ -40,15 +48,16 @@
             </section>
         </header>
         <!-- I need to connect this in the js or find some way later using css -->
-        <section id="projects" class="flex">
-            <section class="ttl caps flex prjcrd" data-file="prehistoric-pours.html" data-bg="assets/projects/prepour-logo2.png">
+        <section id="projects" class="flex neon">
+            <section class="ttl caps flex prjcrd" data-file="prehistoric-pours.html"
+                data-bg="assets/projects/prepour-logo2.png">
                 <section class="flex ttlcontainer column">
                     <p class="project-title">Prehistoric Pours</p>
                     <p class="project-title">Jurassic Park</p>
                 </section>
 
             </section>
-            <section class="ttl caps flex prjcrd"data-file="eecu.html"  data-bg="assets/projects/eecu-table.png">
+            <section class="ttl caps flex prjcrd" data-file="eecu.html" data-bg="assets/projects/eecu-table.png">
                 <section class="flex ttlcontainer column">
 
                     <p class="project-title">Budget Calculator</p>
@@ -56,7 +65,7 @@
 
                 </section>
             </section>
-            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html"  data-bg="assets/projects/tllogo.png">
+            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html" data-bg="assets/projects/tllogo.png">
                 <section class="flex ttlcontainer column">
                     <p class="project-title">Titan's Legacy</p>
                     <p class="project-title">Digital Board Game</p>
@@ -64,7 +73,7 @@
                 </section>
 
             </section>
-            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html"  data-bg="">
+            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html" data-bg="assets/projects/tllogo.png">
                 <section class="flex ttlcontainer column">
                     <p class="project-title">APA Essay</p>
                     <p class="project-title">Jurassic Park</p>
@@ -75,11 +84,12 @@
         </section>
 
         <section id="abt-me" class="flex">
-            <section>
+            <section class="flex column">
                 <h3 class="caps plyfrdspy">About Me</h2>
-                    <p>I spend my time around <strong>technology</strong></p>
+                <p>I spend my time around <strong>technology</strong></p>
             </section>
-            <img src="" alt="picture of me">
+            <img src="assets/aboutme/self.jpg" alt="picture of me">
+
         </section>
         <section id="resume" class="flex">
             <h3 class="caps plyfrdspy">I am a <strong>developer</strong></h2>
@@ -117,7 +127,7 @@
             <h2 class="plyfrdspy">
                 <strong>Thanks</strong> for visiting!
             </h2>
-            <a id="backtt" class="flex column caps" href="#top">
+            <a id="backtt" class="flex column caps neon" href="#top">
                 <h3>back to the top</h3>
                 <p class="arrow">&uparrow;</p>
             </a>
