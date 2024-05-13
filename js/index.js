@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         set_projects_bg(projects.children);
     }
-    init_rain(100);
+    init_rain(50);
     init_scroll_effect();
 })
 
