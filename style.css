@@ -8,6 +8,7 @@
     font-size: 1vw;
     --accent1: #B026FF;
     --accent2: #a54da5;
+    --accent3: #28232c;
     --body: #0e1111;
 }
 /* Reusables */
@@ -34,21 +35,6 @@
 .none{
     display: none;
 }
-/* end */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-
-}
-
-body {
-    background-color: var(--body);
-    color: var(--accent1);
-}
-
 .plyfrdspysc {
     font-family: "Playfair Display SC", serif;
     font-weight: 400;
@@ -61,18 +47,64 @@ body {
     font-weight: 100;
     font-style: normal;
 }
+/* end */
 
-header {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--body);
+    color: var(--accent1);
+}
+
+
+#headerbg{
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    z-index: -1;
+}
+
+.rain{
+    /* 464f9c */
+    background-color: rgb(71, 86, 156);
+    width: 0.1rem;
+    height: 1rem;
+    translate: 50% -100%;
+    border-radius: 50%;
+    position: absolute;
+    filter: drop-shadow(rgba(255, 255, 255, .5) 0px 0px 5px);
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+}
+
+.falling{
+    animation: cross 3.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+}
+#headmain{
+    animation: fadein 600ms linear forwards normal;
+}
+#hero-text p{
+    opacity: 0;
+    animation: fadein 1000ms linear 600ms forwards normal;
+}
+#indexhead {
+    position: relative;
     padding-top: 6rem;
     width: 100%;
     height: 100dvh;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
 }
 
 #herocta {
     width: 50%;
     align-items: center;
+    opacity: 0;
+    animation: fadein 1000ms linear 1s forwards normal;
 }
 
 #herocta>h2 {
@@ -91,7 +123,6 @@ header {
     font-size: 1.2rem;
 }
 main{
-    padding: 0 3rem;
     width: 100%;
     overflow-x: hidden;
 }
@@ -115,7 +146,37 @@ main{
     background-repeat: no-repeat;
     border-radius: 20px;
     color: #000000;
-    transition: all 1s ease;
+    transition: all 1s ease, scale 200ms, width 500ms cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+}
+.prjcrd:hover{
+    scale: 1.01;
+    animation: extra-neon 600ms ease-in-out 0s infinite alternate;
+}
+
+.prjcrd::after{
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 1;
+    content: "see more";
+    text-wrap: nowrap;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 900;
+    font-size: 4rem;
+    width: 0%;
+    height: 105%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent2);
+    background-color: var(--body);
+    top: 50%;
+    transform: translatey(-50%);
+    clip-path: content-box;
+}
+.prjcrd:hover::after{
+    width: 105%;
 }
 
 .project-title:nth-child(1){
@@ -125,10 +186,12 @@ main{
     font-size: .75rem;
 }
 .ttlcontainer{
-    background-color: var(--accent1);
+    background-color: var(--accent3);
     width: 100%;
+    color: var(--accent1);
     justify-content: flex-end;
     padding: .5rem;
+
 }
 .hidden {
     opacity: 0;
@@ -139,25 +202,78 @@ main > section + section{
     margin-top: 4dvh;
 }
 
-.hscroller{
-    height: 100%;
-    font-size: 8rem;
-    text-wrap: nowrap;
+main > section{
+    padding: 0 2rem;
 }
-.hscroller:nth-of-type(1) p{
+
+.hscroller{
+    font-size: 4rem;
+    text-wrap: nowrap;
+    user-select: none;
+}
+
+#resume .btn{
+    transform: translateX(calc(50dvw - 50% - 4rem));
+    margin-top: 2%;
+
+}
+
+#resume .hscroller p{
     animation: scroller 35s linear infinite none;
 }
-.hscroller:nth-of-type(2) p{
-    animation: scroller 35s linear infinite alternate-reverse;
+
+#resumehead{
+    margin-bottom: 2%;
+}
+
+#resume .hscroller:last-of-type p{
+    animation: scroller 35s linear infinite reverse;
 }
 #abt-me{
     height: 70vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#abt-me > section:first-of-type{
+    width: 100%;
+    align-items: center;
+}
+#abt-me img{
+    width: 30%;
+    border-radius: 50%;
+}
+#cardedabtme section:first-of-type{
     justify-content: space-between;
+    row-gap: .75rem;
+    align-items: center;
+    padding-right: 2%;
+    flex-grow: 6;
+}
+#cardedabtme{
+    padding: 1%;
+    background-color: var(--accent3);
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
 }
 
-#abt-me img{
+/* #abt-me::after{
     height: 100%;
-}
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(assets/aboutme/poster2.jpeg);
+} */
+
 /* #abt-me > section:first-of-type{
 
 } */
@@ -173,16 +289,21 @@ img {
 #scroll {
     font-size: 5rem;
     font-weight: 100;
+    user-select: none;
+
 }
 
 #scroll>span {
     display: inline-block;
+    animation: movein 1000ms cubic-bezier(0.19, 1, 0.22, 1) 1.4s 1 forwards; 
+
 }
 #containdrop{
     justify-content: flex-start;
 }
 #containdrop:hover #projects-drop{
     height: 50dvh;
+    border-radius: 6px;
 }
 #projects-drop{
     width: calc(100% + 1.25rem);
@@ -194,8 +315,12 @@ img {
 }
 #projects-drop > a:first-of-type{
     padding-top: 1rem;
+    clip-path: content-box;
 }
 #projects-drop > a{
+    text-align: center;
+    background-color: var(--accent3);
+
     width: 100%;
 }
 
@@ -208,6 +333,13 @@ nav{
     padding-top: 1rem;
     font-weight: 700;
     text-transform: uppercase;
+    transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#navopen{
+    width: 100%;
+    height: 10vh;
+    /* background-color: red; */
 }
 
 .navbtn{
@@ -238,12 +370,14 @@ nav{
     align-items: center;
     text-decoration: none;
     color: var(--accent1);
+
 }
 #backtt > p{
     font-weight: 100;
 
     font-size: 8rem;
 }
+
 #backtt > h3{
     font-weight: 100;
 
@@ -285,6 +419,96 @@ h3 {
     width: 85%;
 
 }
+
+#thx > p{
+    font-size: 8rem;
+    animation: extra-neon 1000ms cubic-bezier(0.19, 1, 0.22, 1) 0s infinite alternate, scroller 15s linear infinite none; 
+}
+hr{
+    width: 100%;
+}
+#cntc{
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+.cntcs{
+    justify-content: space-between;
+    width: 50%;
+}
+.contact-item{
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2%;
+}
+#getincontact{
+    cursor: pointer;
+}
+
+
+.contact-item img{
+    color: white;
+    height: 1.5rem;
+}
+#resumehead{
+    align-items: center;
+    width: 100%;
+}
+/* abt me page */
+#abthead{
+    justify-content: space-around;
+    height: 100dvh;
+    align-items: center;
+}
+#abthead > img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+#abthead > section{
+    width: 50%;
+    justify-content: center;
+}
+
+#abtme-hero{
+    font-size: 5rem;
+}
+.carousel{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+.carouselnav{
+    width: 3rem;
+    user-select: none;
+    height: 3rem;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--body);
+    background-color: var(--accent2);
+    border-radius: 50% ;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.carouselimgs{
+    width: 90%;
+    height: 100%;
+
+    justify-content: center;
+    position: relative;
+}
+
+.carouselimgs > img{
+    height: 100%;
+    object-fit: contain;
+}
 /* anims */
 @keyframes arrow-point {
     from {
@@ -302,5 +526,43 @@ h3 {
     }
     to{
         transform: translateX(-100%);
+        
+    }
+}
+
+
+@keyframes cross {
+    to{
+        transform: translateX(0) translateY(120vh);
+    }
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes extra-neon {
+    from{
+        filter: drop-shadow(rgba(182, 61, 230, 0.5) 0px 0px 5px);
+    }
+    to{
+        filter: drop-shadow(rgba(225, 149, 255, 0.5) 0px 0px 15px);
+     }
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes movein {
+    to{
+        transform: none;
     }
 }

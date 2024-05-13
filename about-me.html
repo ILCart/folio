@@ -5,23 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="js/abt-me.js"></script>
+    <script src="js/uni.js"></script>
     <title>About Me</title>
 </head>
 
 <body>
-    <h1 class="caps plyfrdspysc"><em>About Isaac Lay</em></h1>
-    <section>
-        <figure>
-            <img src="" alt="isaac lay">
-        </figure>
-        <p>My name is Isaac Lay. I am currently a student at the Center for Advanced Research and Technology (CART) as
-            well as Buchanan High School. I will graduate from highschool in 2025. This year I am enrolled in the Web
-            Application Development Lab at CART. I am a Junior and this is my first year at CART. I hope to get an
-            internship in my freshman year of college under a small company. I want to continue creating websites but if
-            something were to happen I would instead do analysis on big datasets. I know for sure that I want to be in a
-            career that works with or on computers and new technology. I have had a drive and passion for technology
-            ever since I got my hands on it in 2011.</p>
-    </section>
+    <nav class="flex neon">
+        <section class="flex" id="directory">
+            <a href="index.html" class="active btn navbtn">home</a>
+            <a href="#" class="btn navbtn">about me</a>
+            <section class="navbtn btn flex column nw" id="containdrop">
+                <a href="projects.html" id="projectsnav" class="btn column flex">projects</a>
+                <section id="projects-drop" class="flex column nw">
+                    <a class="btn" href="#">P1</a>
+                    <a class="btn" href="#">P2</a>
+                    <a class="btn" href="#">P3</a>
+                    <a class="btn" href="#">P4</a>
+                </section>
+            </section>
+            
+        </section>
+    </nav>
+    <header id="abthead" class="flex">
+        <img src="assets/aboutme/isaac-lay.webp" alt="isaac lay">
+        <section>
+            <h1 id="abtme-hero" class="caps plyfrdspysc neon">About Isaac Lay</h1>
+            <p>Hi! I am currently a student at the Center for Advanced Research and Technology
+                as
+                well as Buchanan High School. I am a junior this year and will graduate in 2025. At <abbr title="Center for Advanced Research and Technology">CART</abbr> I am enrolled in the
+                Web
+                Application Development Lab. I have had a drive and passion for technology
+                ever since I got my hands on it in 2011. Technology has been my life and I usually stay ontop of it.</p>
+        </section>
+    </header>
     <section>
         <h2>Education & Experience</h2>
         <section>
@@ -80,18 +97,23 @@
                 is just part of the trade. Quick thinking and being robust allowed me and my team to persevere and
                 execute
                 great lion dances.</p>
-            <section class="hscroll flex">
-                <!-- carousel surley? -->
-                <img src="assets/aboutme/ld1.jpg" alt="lion dance at local elementary">
-                <img src="assets/aboutme/ld2.jpg" alt="lion dance at neighboring high school">
-                <img src="assets/aboutme/ld3.jpg" alt="">
-                <img src="assets/aboutme/ld4.jpg" alt="">
-                <img src="assets/aboutme/ld5.jpg" alt="">
-                <img src="assets/aboutme/ld6.jpg" alt="">
-                <!-- <img src="assets/aboutme/ld7.jpg" alt=""> -->
-                <img src="assets/aboutme/ld8.jpg" alt="">
-                <img src="assets/aboutme/ld9.jpg" alt="">
+            <section class="carousel flex">
+                <a class="carouselnav flex">&leftarrow;</a>
+                <section class="carouselimgs flex">
+                    <!-- carousel surley? -->
+                    <img class="" src="assets/aboutme/ld1.jpg" alt="lion dance at local elementary">
+                    <img class="none" src="assets/aboutme/ld2.jpg" alt="lion dance at neighboring high school">
+                    <img class="none" src="assets/aboutme/ld3.jpg" alt="">
+                    <img class="none" src="assets/aboutme/ld4.jpg" alt="">
+                    <img class="none" src="assets/aboutme/ld5.jpg" alt="">
+                    <img class="none" src="assets/aboutme/ld6.jpg" alt="">
+                    <!-- class="none" <img src="assets/aboutme/ld7.jpg" alt=""> -->
+                    <img class="none" src="assets/aboutme/ld8.jpg" alt="">
+                    <img class="none" src="assets/aboutme/ld9.jpg" alt="">
+                </section>
+                <a class="carouselnav flex">&rightarrow;</a>
             </section>
+
         </section>
         <section>
             <h3>Fixing Chinese Lions</h3>

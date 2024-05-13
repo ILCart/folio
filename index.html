@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="js/index.js" type="module"></script>
+    <script src="js/uni.js"></script>
 </head>
 
 <body id="top">
@@ -22,15 +23,22 @@
                     <a class="btn" href="#">P3</a>
                     <a class="btn" href="#">P4</a>
                 </section>
-            </section>
 
+            </section>
+            <a href="#" class="btn navbtn">resume</a>
+            <a href="index.html#getincontact" class="btn navbtn">contact me</a>
+
+        </section>
+        <section id="navopen">
+            
         </section>
     </nav>
     <main>
-        <header class="flex column">
+        <header id="indexhead" class="flex column">
             <section class="flex column" id="hero-text">
                 <img src="assets/name.svg" alt="Hi, I am Isaac Lay" id="headmain" class="neon">
-                <p>A <strong>developer</strong> for the <em>web</em>. This is <strong><em>my portfolio.</em></strong>
+                <p>A <strong class="neon">developer</strong> for the <em>web</em>. This is <strong class="neon"><em>my
+                            portfolio.</em></strong>
                 </p>
             </section>
             <section class="flex column neon" id="herocta">
@@ -46,10 +54,13 @@
                 </section>
                 <h2 class="arrow">&DownArrow;</h2>
             </section>
+            <div id="headerbg">
+
+            </div>
         </header>
         <!-- I need to connect this in the js or find some way later using css -->
         <section id="projects" class="flex neon">
-            <section class="ttl caps flex prjcrd" data-file="prehistoric-pours.html"
+            <section class="ttl caps flex prjcrd" data-file="projects/prehistoric-pours.html"
                 data-bg="assets/projects/prepour-logo2.png">
                 <section class="flex ttlcontainer column">
                     <p class="project-title">Prehistoric Pours</p>
@@ -57,7 +68,8 @@
                 </section>
 
             </section>
-            <section class="ttl caps flex prjcrd" data-file="eecu.html" data-bg="assets/projects/eecu-table.png">
+            <section class="ttl caps flex prjcrd" data-file="projects/eecu.html"
+                data-bg="assets/projects/eecu-table.png">
                 <section class="flex ttlcontainer column">
 
                     <p class="project-title">Budget Calculator</p>
@@ -65,7 +77,8 @@
 
                 </section>
             </section>
-            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html" data-bg="assets/projects/tllogo.png">
+            <section class="ttl caps flex prjcrd" data-file="projects/titans-legacy.html"
+                data-bg="assets/projects/tllogo.png">
                 <section class="flex ttlcontainer column">
                     <p class="project-title">Titan's Legacy</p>
                     <p class="project-title">Digital Board Game</p>
@@ -73,7 +86,8 @@
                 </section>
 
             </section>
-            <section class="ttl caps flex prjcrd" data-file="titans-legacy.html" data-bg="assets/projects/tllogo.png">
+            <section class="ttl caps flex prjcrd" data-file="projects/titans-legacy.html"
+                data-bg="assets/projects/tllogo.png">
                 <section class="flex ttlcontainer column">
                     <p class="project-title">APA Essay</p>
                     <p class="project-title">Jurassic Park</p>
@@ -86,30 +100,39 @@
         <section id="abt-me" class="flex">
             <section class="flex column">
                 <h3 class="caps plyfrdspy">About Me</h2>
-                <p>I spend my time around <strong>technology</strong></p>
+                    <p>I spend my time around <strong class="neon">technology</strong></p>
             </section>
-            <img src="assets/aboutme/self.jpg" alt="picture of me">
+            <section id="cardedabtme" class="flex">
+                <section class="flex column">
+                    <p>A <strong class="neon">driven</strong> individual who strives to <em>learn and create</em>.</p>
+                    <a href="about-me.html" class="btn caps navbtn">learn more</a>
+                </section>
+                <img src="assets/aboutme/self.jpg" alt="picture of me">
+            </section>
 
         </section>
         <section id="resume" class="flex">
-            <h3 class="caps plyfrdspy">I am a <strong>developer</strong></h2>
-                <p>I make <em>responsive</em> websites and <em>interactive</em> prototypes.</p>
-                <section class="hscroller flex caps nw">
-                    <!-- this gonna be scrolling across screen -->
-                    <p>| css | html | figma | javascript | responsive design | uxd | layout |</p>
-                    <p>css | html | figma | javascript | responsive design | uxd | layout |</p>
+            <section id="resumehead" class="flex column">
+                <h3 class="caps plyfrdspysc">I am a <strong class="neon">developer</strong></h2>
+                    <p>I make <em>responsive</em> websites and <em>interactive</em> prototypes.</p>
 
-                </section>
-                <section class="hscroller flex caps nw">
-                    <!-- this gonna be scrolling across screen -->
-                    <p>| rust | python | lua | vscode | github |</p>
-                    <p>rust | python | lua | vscode | github |</p>
+            </section>
+            <section class="hscroller flex caps nw">
+                <!-- this gonna be scrolling across screen -->
+                <p>| css | html | figma | javascript | responsive design | uxd | layout | rust | python | lua | vscode | github</p>
+                <p>| css | html | figma | javascript | responsive design | uxd | layout | rust | python | lua | vscode | github</p>
 
-                </section>
+            </section>
+            <section class="hscroller flex caps nw">
+                <!-- this gonna be scrolling across screen -->
+                <p>| leadership | communication | time management | public speaking | responsible</p>
+                <p>| leadership | communication | time management | public speaking | responsible</p>
 
+            </section>
+            <a href="resume.html" class="caps btn navbtn">what else can I do?</a>
         </section>
-        <section id="cntc">
-            <h2>Get in <em>contact</em></h2>
+        <section id="cntc" class="flex column">
+            <h2 id="getincontact" class="neon caps">Get in <em>contact</em></h2>
             <hr>
             <section class="cntcs flex">
                 <section class="contact-item flex">
@@ -124,9 +147,15 @@
             </section>
         </section>
         <footer class="flex column">
-            <h2 class="plyfrdspy">
-                <strong>Thanks</strong> for visiting!
-            </h2>
+
+            <section id="thx" class="plyfrdspy hscroller flex nw caps">
+                <p>| thanks! |</p>
+                <p>| thanks! |</p>
+                <p>| thanks! |</p>
+                <p>| thanks! |</p>
+                <p>| thanks! |</p>
+
+            </section>
             <a id="backtt" class="flex column caps neon" href="#top">
                 <h3>back to the top</h3>
                 <p class="arrow">&uparrow;</p>
