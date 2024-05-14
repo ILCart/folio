@@ -15,16 +15,19 @@
         <section class="flex" id="directory">
             <a href="index.html" class="active btn navbtn">home</a>
             <a href="#" class="btn navbtn">about me</a>
-            <section class="navbtn btn flex column nw" id="containdrop">
-                <a href="projects.html" id="projectsnav" class="btn column flex">projects</a>
-                <section id="projects-drop" class="flex column nw">
-                    <a class="btn" href="#">P1</a>
-                    <a class="btn" href="#">P2</a>
-                    <a class="btn" href="#">P3</a>
-                    <a class="btn" href="#">P4</a>
+            <!-- <a href="projects.html" id="projectsnav" class="btn navbtn">projects</a> -->
+            <section class="dropdown">
+                <a href="projects.html" id="projectsnav" class="btn navbtn">projects</a>
+                <section class="dropdown-content">
+                    <a class="btn" href="projects/prehistoric-pours.html">Prehistoric Pours</a>
+                    <a class="btn" href="projects/eecu.html">EECU</a>
+                    <a class="btn" href="projects/titans-legacy.html">Titan's Legacy</a>
+
+
+                    <!-- Add more projects as needed -->
                 </section>
             </section>
-            
+
         </section>
     </nav>
     <header id="abthead" class="flex">
@@ -33,107 +36,165 @@
             <h1 id="abtme-hero" class="caps plyfrdspysc neon">About Isaac Lay</h1>
             <p>Hi! I am currently a student at the Center for Advanced Research and Technology
                 as
-                well as Buchanan High School. I am a junior this year and will graduate in 2025. At <abbr title="Center for Advanced Research and Technology">CART</abbr> I am enrolled in the
+                well as Buchanan High School. I am a junior this year and will graduate in 2025. At <abbr
+                    title="Center for Advanced Research and Technology">CART</abbr> I am enrolled in the
                 Web
                 Application Development Lab. I have had a drive and passion for technology
                 ever since I got my hands on it in 2011. Technology has been my life and I usually stay ontop of it.</p>
         </section>
     </header>
-    <section>
+    <section id="eduints" class="flex">
         <h2 class="plyfrdspysc">Education & Experience</h2>
-        <section class="flex eduintcard">
-            <section class="stats flex column">
-                <h3 class="plyfrdspysc">stats</h3>
-                <p>4.1 UC GPA</p>
-                <p>AP Biology 5</p>
+
+        <section class="flex eduintcards">
+            <section class="flex eduintcard column nw">
+                <section class="eduintimgcontainer flex">
+                    <img src="assets/aboutme/bhs.jpg" alt="">
+                </section>
+                <h4 class="plyfrdspysc">Buchanan High School</h4>
+                <section class="descripteduint">
+
+                    <p>I did all my years of high school education at <abbr title="Buchanan High School">BHS</abbr>. The
+                        campus
+                        is clean and based on an outdoor
+                        layout. Many teachers at this school have helped me succeed and made school a little more
+                        bearable.
+                    </p>
+                </section>
+                <section class="stats flex">
+                    <p>4.1 UC GPA</p>
+                    <p>5 in AP Biology</p>
+                    <p>Chinese 3</p>
+                    <p>Math 3</p>
+                </section>
             </section>
-            <section class="eduinthead flex column">
-                <h3>Buchanan High school</h3>
-                <img src="assets/aboutme/chinatown.jpeg" alt="">
-                <p>I did all my years of high school education at <abbr title="Buchanan High School">BHS</abbr>. The campus is clean and based on an outdoors
-                    layout. Many teachers at this school have helped me succeed and made school a little more bearable.</p>
-            
+            <section id="grad" class="flex eduintcard column neon nw">
+                <section class="eduintimgcontainer flex">
+                    <img src="assets/aboutme/grad.jpg" alt="">
+                </section>
+                <h4 class="plyfrdspysc">What after 2025?</h4>
+                <section class="descripteduint">
+                    <p>I plan to have a job in information technology, website development, or data science. I love the
+                        Bay
+                        area
+                        and I would like to live there. My dream school is UC Irvine and Cal Poly SLO.</p>
+                </section>
+                <section class="stats flex">
+
+
+
+                </section>
             </section>
-            
+            <section class="flex eduintcard column nw">
+                <section class="eduintimgcontainer flex">
+                    <img src="assets/aboutme/cart.jpg" alt="">
+                </section>
+                <h4 class="plyfrdspysc"><abbr title="Center for Advanced Research and Technology">CART</abbr></h4>
+                <section class="descripteduint">
+
+                    <p>
+                        <abbr title="Center for Advanced Research and Technology">CART</abbr> is one of the best places
+                        for
+                        career technical education courses. I enrolled in the Web Application
+                        Development, and I created websites and learned all sorts of paragdims in the web
+                        development world.
+
+                    </p>
+                </section>
+                <section class="stats flex">
+                    <p>4.0 GPA</p>
+                    <p>Web App</p>
+                    <p>H English 11</p>
+                    <p>Applied Design</p>
+                </section>
+            </section>
+            <section class="flex eduintcard column nw">
+                <section class="eduintimgcontainer flex">
+                    <img src="assets/aboutme/bhscc.png" alt="">
+                </section>
+                <h4 class="plyfrdspysc">Chinese Club President</h4>
+                <section class="descripteduint">
+                    <p>Under my wonderful advisor and teacher Lili Wong I have come to get involved in my culture and host
+                        monthly meetings for the purpose of discovering Chinese culture. I had to lead the monthly meetings and
+                        speak to everyone about a cultural event happening at the time of the meeting.</p>
+                </section>
+                <section class="stats flex">
+                    <p>Organize Meetings</p>
+                    <p><abbr title="Peer to Peer">P2P</abbr> Contact</p>
+                    <p>Volunteer Organzation</p>
+                    <p class="flex logoiconp"> <img class="logoicon" src="assets/mail.svg" alt="">@bhs.chinese.club</p>
+
+
+                </section>
+            </section>
+            <section class="flex eduintcard column nw">
+                <section class="eduintimgcontainer flex">
+                    <img src="assets/aboutme/ld5.jpg" alt="">
+                </section>
+                <h4 class="plyfrdspysc">Lion Dance</h4>
+                <section class="descripteduint">
+                    <p>Lion dancing has become an essential past time of mine. Over the school year every week me and my team
+                        pracitces for 2-4 hours. Then we go out and perform to spread luck to the community and to really expose
+                        what lion dance is all about.</p>
+                </section>
+                <section class="stats flex">
+                    <p><abbr title="150 Hours">Community Service</abbr></p>
+                    <p>Community Outreach</p>
+                    <p>Spread of Culture</p>
+                    <p class="flex logoiconp"> <img class="logoicon" src="assets/mail.svg" alt="">@bhs_chinese_ldt</p>
+
+                </section>
+            </section>
         </section>
-        <section>
-            <h3>The Center for Advanced Research and Technology</h3>
-            <p>CART is one of the best placed for career technical education courses. I enrolled in the Web Application
-                Development course and had a blast creating websites and learning all sorts of paragdims in the web
-                development world. My teachers and fellow classmates made the class very enjoyable and I would reccomend
-                it to anyone willing to put in the effort to learn. We used JavaScript, CSS, HTML, and Figma to create
-                our sites.</p>
-            <p>4.0 GPA</p>
         </section>
 
-        <section>
-            <h3>Chinese Club President</h3>
-            <p>Under my wonderful advisor and teacher Lili Wong I have come to get involved in my culture and host
-                monthly meetings for the purpose of discovering Chinese culture. I had to lead the monthly meetings and
-                speak to everyone about a cultural event happening at the time of the meeting.</p>
-        </section>
-        <section>
-            <h3>Lion Dancer</h3>
-            <p>Lion dancing has become an essential past time of mine. Over the school year every week me and my team
-                pracitces for 2-4 hours. Then we go out and perform to spread luck to the community and to really expose
-                what lion dance is all about.</p>
-            <p>Accumalated over 150 hours of community service</p>
-        </section>
-        <section>
-            <h3>What after 2025?</h3>
-            <p>I plan to have a job in information technology, website development, or data science. I love the Bay area
-                and I would like to live in San Diego. My dream school is UC Irvine. If I can not get into UC Irvine I
-                will go to community college for two years and knock out my general education and work towards Fresno
-                State.</p>
-            <p>I want to create new ways for lion dancers to signal to each other what to do Such as creating an led
-                indicator light that change colors based on what the lion head wants to do </p>
-        </section>
+        
+
     </section>
 
-    <section>
-        <h2>Interests & Hobbies</h2>
+    <section id="hobbies">
+        <h2 class="plyfrdspysc">Interests & Hobbies</h2>
         <section>
-            <h3>Lion Dance</h3>
-            <p>In my freshmen year of high school my sister told me to join BHS's lion dance team. At the time I was
-                just
-                thinking about it and in my sophmore year I decided, why not? So in the sophmore year I started lion
-                dancing. Every week for 2 hours we would practice in the hallway outside of the Chinese classroom. It
-                was
-                fun but also stressful there was many times where my team would plan on the spot on what to do which I
-                think
-                is just part of the trade. Quick thinking and being robust allowed me and my team to persevere and
-                execute
-                great lion dances.</p>
-            <section class="carousel flex">
-                <a class="carouselnav flex">&leftarrow;</a>
-                <section class="carouselimgs flex">
-                    <!-- carousel surley? -->
-                    <img class="" src="assets/aboutme/ld1.jpg" alt="lion dance at local elementary">
-                    <img class="none" src="assets/aboutme/ld2.jpg" alt="lion dance at neighboring high school">
-                    <img class="none" src="assets/aboutme/ld3.jpg" alt="">
-                    <img class="none" src="assets/aboutme/ld4.jpg" alt="">
-                    <img class="none" src="assets/aboutme/ld5.jpg" alt="">
-                    <img class="none" src="assets/aboutme/ld6.jpg" alt="">
-                    <!-- class="none" <img src="assets/aboutme/ld7.jpg" alt=""> -->
-                    <img class="none" src="assets/aboutme/ld8.jpg" alt="">
-                    <img class="none" src="assets/aboutme/ld9.jpg" alt="">
+            <h3 class="plyfrdspysc">Lion Dance</h3>
+            <section id="ldcontent" class="flex">
+                <p>In my freshmen year of high school my sister told me to join BHS's lion dance team. At the time I was
+                    just
+                    thinking about it and in my sophmore year I decided, why not? So in my sophmore year I started lion
+                    dancing. Every week for 2 hours we would practice in the hallway outside of the Chinese classroom. It
+                    was
+                    fun but also stressful there were many times where my team would plan on the spot on what to do. Quick thinking and being robust allowed me and my team to persevere and
+                    execute
+                    great lion dances.</p>
+                <section id="ldcarousel" class="carousel flex">
+                    <a class="carouselnav flex">&leftarrow;</a>
+                    <section class="carouselimgs flex">
+                        <!-- carousel surley? -->
+                        <img class="" src="assets/aboutme/ld1.jpg" alt="lion dance at local elementary">
+                        <img class="none" src="assets/aboutme/ld2.jpg" alt="lion dance at neighboring high school">
+                        <img class="none" src="assets/aboutme/ld3.jpg" alt="">
+                        <img class="none" src="assets/aboutme/ld4.jpg" alt="">
+                        <img class="none" src="assets/aboutme/ld5.jpg" alt="">
+                        <img class="none" src="assets/aboutme/ld6.jpg" alt="">
+                        <!-- class="none" <img src="assets/aboutme/ld7.jpg" alt=""> -->
+                        <img class="none" src="assets/aboutme/ld8.jpg" alt="">
+                        <img class="none" src="assets/aboutme/ld9.jpg" alt="">
+                    </section>
+                    <a class="carouselnav flex">&rightarrow;</a>
                 </section>
-                <a class="carouselnav flex">&rightarrow;</a>
             </section>
 
         </section>
-        <section>
-            <h3>Fixing Chinese Lions</h3>
+        <!-- <section>
+            <h3 class="plyfrdspy">Fixing Chinese Lions</h3>
             <p>My junior year of highschool I noticed that our lion needed many repairs. The eyes were drooping the jaw
                 was slipping and much more. I stepped up and have been the sole maintainer of the lion for about a year.
                 It has been fun and I like being able to create systems that make me and my teams performances a lot
                 easier.</p>
             <section class="hscroll flex">
-                <!-- I dont have pics of the lion insides yet -->
             </section>
-        </section>
-        <section>
-            <h3>Chinese Culture</h3>
+        </section> -->
+        <section id="chncul">
+            <h3 class="plyfrdspysc">Chinese Culture</h3>
             <p>When I started my first year of highschool the first club I joined was the Chinese Cultural Club at BHS.
                 I attended meetings and learnt about what makes China so interesting. In my sophmore year I ran for the
                 nex club president and won. Once my junior year started I got threw into the world of chaos that is
@@ -143,15 +204,16 @@
             <img src="assets/aboutme/chinatown.jpeg" alt="sf chinatown">
         </section>
         <section>
-            <h3>Programming</h3>
+            <h3 class="plyfrdspy">Programming</h3>
+            
+            <a href="/projects.html">All my work!</a>
             <p>All my life I have been attached to the web. From tablet to laptop to phone I always had it. Computers
                 and what makes them work always fasinated me. Tinkering with RC cars and toys I would have was a great
                 deal of my childhood. As I grew older I picked up scripting from Roblox and that transfered to
                 JavaScript and CSS for web design.</p>
-            <a href="/projects.html">All my work!</a>
         </section>
         <section>
-            <h3>Design & Photography</h3>
+            <h3 class="plyfrdspy">Design & Photography</h3>
             <p>I love nature and just seeing the world and this led to my love for biology. The way living things work
                 is so cool! The natural formation of the things around us is just so beautiful and capturing it is one
                 of my hobbies. This also branched off into creaing posters and creating visually interesting graphics.

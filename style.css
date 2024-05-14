@@ -9,7 +9,30 @@
     --accent1: #B026FF;
     --accent2: #a54da5;
     --accent3: #28232c;
+    --accent4: #1a1a1a;
     --body: #0e1111;
+}
+
+/* For Firefox */
+* {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #c5c5c5 #000000;
+}
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #c5c5c5;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 20px;
+    border: 3px solid #f6f6f6;
 }
 /* Reusables */
 .caps {
@@ -253,7 +276,7 @@ main > section{
     flex-grow: 1;
 }
 #cardedabtme a{
-    width: 50%;
+    width: 60%;
     font-size: 2rem;
     font-weight: 600;
 }
@@ -305,31 +328,41 @@ img {
     animation: movein 1000ms cubic-bezier(0.19, 1, 0.22, 1) 1.4s 1 forwards; 
 
 }
-#containdrop{
-    /* justify-content: flex-start; */
+ 
+.dropdown {
+    position: relative;
 }
-#containdrop:hover #projects-drop{
-    height: 50dvh;
-    border-radius: 6px;
-}
-#projects-drop{
-    width: calc(100% + 1.25rem);
-    clip-path: fill-box;
-    
-    height: 0px;
-    transition: height 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    /* display: inline-flex; */
-}
-#projects-drop > a:first-of-type{
-    padding-top: 1rem;
-    clip-path: content-box;
-}
-#projects-drop > a{
-    text-align: center;
-    background-color: var(--accent3);
 
+.dropdown-content {
+    max-height: 0;
+    clip-path: fill-box;
+    position: absolute;
+    background-color: var(--accent3);
     width: 100%;
+    z-index: 1;
+    transition: max-height 500ms linear;
 }
+.dropdown-content a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    text-align:center;
+    width: 100%;
+    color: var(--accent1);
+    font-weight: 400;
+}
+.dropdown-content a + a{
+    border-top: 2px var(--accent1) solid;
+
+}
+.dropdown-content a:hover{
+    color: var(--accent2);
+}
+.dropdown:hover .dropdown-content {
+    max-height: 50vh;
+}
+
 
 nav{
     z-index: 1;
@@ -352,6 +385,7 @@ nav{
 .navbtn{
     display: flex;
     align-items: center;
+
     justify-content: center;
     color: var(--accent1);
     background-color: var(--body);
@@ -481,15 +515,22 @@ hr{
     width: 50%;
     justify-content: center;
 }
-
+h4{
+    font-size: 1.75rem;
+}
 #abtme-hero{
     font-size: 5rem;
+}
+#ldcarousel{
+    width: 50%;
 }
 .carousel{
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 50vh;
+    background-color: var(--accent3);
+    border-radius: 8px;
 }
 .carouselnav{
     width: 3rem;
@@ -506,7 +547,7 @@ hr{
     cursor: pointer;
 }
 .carouselimgs{
-    width: 90%;
+    width: calc(100% - 6rem);
     height: 100%;
 
     justify-content: center;
@@ -514,25 +555,101 @@ hr{
 }
 
 .carouselimgs > img{
+    width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: top;
 }
-.eduinthead{
+#ldcontent{
+    padding: 0 3rem;
+    justify-content: space-between;
     align-items: center;
-    align-content: center;
-    width: 25%;
 }
-.eduinthead img{
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+#ldcontent p{
+    width: 40%;
 }
-.eduintcard{
+#chncul{
+    background-color: var(--accent4);
+}
+#eduints{
     justify-content: space-around;
 }
-.stats{
-    height: 100%;
+#eduints h2,#hobbies h2{
+    text-align: center;
+    width: 100%;
+}
+.logoicon{
+    height: 2rem;
+    padding-right: .5rem;
+    aspect-ratio: 1/1;
+}
+
+.eduintcard{
+    background-color: var(--accent3);
+    align-content: center;
     align-items: center;
+    justify-content:space-between;
+    /* width: 30%; */
+    flex-basis: 30%;
+    border-radius: 8px;
+    height: 70vh;
+    flex-shrink: 1;
+}
+.eduintcards{
+    justify-content: center;
+    align-content: center;
+    row-gap: 3rem;
+    column-gap: 3rem;
+}
+.descripteduint{
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    border-radius: 8px;
+    border: solid var(--accent1) 2px;
+    background-color: var(--accent4);
+    height: 20%;
+}
+.descripteduint > p{
+    height: 100%;
+    overflow-y: auto;
+    
+    scroll-behavior: smooth;
+}
+.eduintimgcontainer{
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    height: 50%;
+    border-radius: 8px;
+}
+.eduintimgcontainer  > img{
+    padding-bottom: 0;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.eduintcard h4{
+    padding-bottom: 1rem;
+}
+.stats{
+    flex-grow: 1;
+    padding: 1rem;
+}
+.stats > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+#hobbies >section > h3{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
 }
 /* anims */
 @keyframes arrow-point {
@@ -591,3 +708,7 @@ hr{
         transform: none;
     }
 }
+
+@media only screen and (max-width: 640px) {
+    
+  }
