@@ -526,6 +526,7 @@ h4{
 }
 #ldcarousel{
     width: 50%;
+    padding: 1%;
 }
 .carousel{
     justify-content: center;
@@ -552,7 +553,7 @@ h4{
 .carouselimgs{
     width: calc(100% - 6rem);
     height: 100%;
-
+    align-content: center;
     justify-content: center;
     position: relative;
 }
@@ -561,7 +562,7 @@ h4{
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: top;
+    object-position: center;
 }
 #ldcontent{
     padding: 0 3rem;
@@ -570,10 +571,12 @@ h4{
 }
 #ldcontent p{
     width: 40%;
-}
-#chncul{
+    border: 2px var(--accent1) solid;
+    padding: 1rem;
+    border-radius: 8px;
     background-color: var(--accent4);
 }
+
 #eduints{
     justify-content: space-around;
 }
@@ -653,6 +656,58 @@ h4{
     margin-bottom: 2rem;
     width: 100%;
     text-align: center;
+}   
+#chncul{
+    padding: 3rem;
+}
+#chinacontent{
+    background-color: var(--accent3);
+    padding: 2rem;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#chinacontent > p{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--accent4);
+    width: calc(75% - 3rem);
+    border-radius: 8px;
+    border: 2px var(--accent1) solid;
+
+}
+#chinacontent .fig{
+    overflow: hidden;
+    border-radius: 8px;
+    width: 25%;
+
+}
+#photodesign{
+    justify-content: center;
+}
+.fig > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.gallery{
+    column-gap: 3rem;
+}
+.gallery > .fig{
+    border-radius: 20px;
+    overflow: hidden;
+    width: 5vw;
+    height: 60vh;
+    transition: all 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: saturate(0) brightness(.75);
+    cursor: pointer;
+}
+
+.gallery > .fig:hover{
+width: 10vw;
+filter: none;
 }
 /* anims */
 @keyframes arrow-point {
@@ -718,5 +773,17 @@ h4{
     }
     #cardedabtme{
         width: 100%;
+    }
+    .eduintcard{
+        flex-basis: 100%;
+    }
+    #ldcontent > *{
+        width: 100%;
+    }
+    #ldcontent p{
+        width: 100%;
+    }
+    #abthead{
+        flex-direction: column;
     }
   }

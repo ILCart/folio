@@ -26,8 +26,30 @@ function init_carousels(){
         })
     }
 }
+let gallery = false;
+function apply_gallery_events(gallery){
+    let children = gallery.children;
+    for (const child of children) {
+        child.addEventListener("click",()=>{
+            if(gallery){
+                child.style.width = ""
+            child.style.height = ""
+            }else{
+                child.style.width = "50vw"
+            child.style.height = "100%"
+            }
+            gallery = !gallery;
+        })
+    }
+}
 
+function init_gallery(){
+    let galleries = document.getElementsByClassName("gallery");
+    for (const gallery of galleries) {
+        apply_gallery_events(gallery);
+    }
+}
 document.addEventListener("DOMContentLoaded", () => {
     init_carousels();
-
+    init_gallery();
 })
