@@ -265,7 +265,10 @@ main > section{
     align-items: center;
 }
 #abt-me img{
-    height: 100%;
+    max-width: 30%;
+    max-height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     border-radius: 50%;
 }
 #cardedabtme section:first-of-type{
@@ -710,5 +713,10 @@ h4{
 }
 
 @media only screen and (max-width: 640px) {
-    
+    .prjcrd{
+        width: 100%;
+    }
+    #cardedabtme{
+        width: 100%;
+    }
   }
