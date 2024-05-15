@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    --accent1: #B026FF;
+    --accent2: #a54da5;
+    --accent3: #28232c;
+    --accent4: #1a1a1a;
+    --body: #0e1111;
+}
+
+.plyfrdspysc {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.plyfrdspy {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* For Firefox */
+* {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #c5c5c5 #000000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #c5c5c5;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 20px;
+    border: 3px solid #f6f6f6;
+}
+
+body{
+    background-color: var(--body);
+    color: var(--accent1);
+}
+#topimgcontainer{
+    width: 100%;
+    justify-content: center;
+}
+#topimage{
+    height: 100%;
+    width: 80%;
+}
+
+.fig figcaption{
+    width: 100%;
+    text-align: center;
+}
+.fig img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+main{
+    padding: 0 3rem;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+}
+.flex{
+    display: flex;
+    flex-flow: row wrap;
+}
+header{
+    height: 100vh;
+}
+.galleryprjct{
+    width: 50%;
+    background-color: var(--accent3);
+}
+.galleryprjct img{
+    padding: 1%;
+}
