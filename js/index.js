@@ -13,7 +13,7 @@ let jumpyloopy = (dt) => {
 //Redirect a clickable element to a file
 function redirect(clickable, file) {
     clickable.addEventListener("click",() => {
-        open(file)
+        open(file,"_self")
     })
 }
 function change_bg(clickable, file) {

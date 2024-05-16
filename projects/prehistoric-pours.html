@@ -5,19 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="/nav.css">
+
     <title>Prehistoric Pours</title>
 </head>
 
 <body>
+    <nav class="neon">
+        <a href="#" id="menuopen"><img src="assets/hamburg.svg" alt=""></a>
+        <section id="directory" class="navhide">
+            <a href="../index.html" class="btn navbtn">home</a>
+            <a href="../about-me.html" class="btn navbtn">about me</a>
+            <section class="dropdown">
+                <a href="../projects.html" id="projectsnav" class="btn navbtn">projects</a>
+                <section class="dropdown-content">
+                    <a class="btn" href="prehistoric-pours.html">Prehistoric Pours</a>
+                    <a class="btn" href="eecu.html">EECU</a>
+                    <a class="btn" href="titans-legacy.html">Titan's Legacy</a>
+
+                </section>
+            </section>
+            <a href="../resume.html" class="btn navbtn">resume</a>
+            <a href="../index.html#cntc" class="btn navbtn">contact me</a>
+
+        </section>
+    </nav>
     <main>
         <header>
         <h1 class="plyfrdspysc">Jurassic Park <br><em>Prehistoric pours</em></h1>
-        <section id="topimgcontainer" class="flex">
-            <figure id="topimage" class="fig">
-                <img src="/assets/projects/prepour-home.png" alt="landing page">
-                <figcaption>CSS | JS | HTML | GITHUB | VS CODE | FIGMA</figcaption>
-            </figure>
-        </section>
+        <a href="https://prehistoricpours.netlify.app/" target="_blank">
+            <section id="topimgcontainer" class="flex">
+                <figure id="topimage" class="fig">
+                    <img src="/assets/projects/prepour-home.png" alt="landing page">
+                    <figcaption>CSS | JS | HTML | GITHUB | VS CODE | FIGMA</figcaption>
+                </figure>
+            </section>
+        </a>
         </header>
         <p id="desc">In my Honors English 11 Class at CART we read the book <em>Jurassic Park</em>. Naturally this became our theme for CART's 2023 showcase. Me and partner designed a website for a coffee shop/bakery located inside Jurassic Park. This website uses technology to achive a faux shopping cart experience and fully responsive layout. This project taught me a ton about responsive design and what units I should be using to create a good looking site. I also had to work with a partner which I have never done before. We ran into some compatibility problems between platforms but I worked to solve it. The problem was on IOS devices not loading out background textures turning them white and with white as our main text color this did not pair well for accessibility. Even through the challenges of our orginal plans we persevered and together we created a great site.</p>
         <section id="gallery" class="flex">
@@ -27,6 +50,9 @@
             <figure class="fig galleryprjct">
                 <img src="/assets/projects/prepour-footer.png" alt="">
     
+            </figure>
+            <figure class="fig galleryprjct">
+                <img src="/assets/projects/prepour-popup.png" alt="">
             </figure>
             <figure class="fig galleryprjct">
                 <img src="/assets/projects/prepour-cart.png" alt="">

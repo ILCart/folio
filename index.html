@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="style.css">
     <script src="js/index.js" type="module"></script>
     <script src="js/uni.js"></script>
@@ -11,8 +12,9 @@
 
 <body id="top">
 
-    <nav class="flex neon">
-        <section class="flex" id="directory">
+    <nav class="neon">
+        <a href="#" id="menuopen"><img src="assets/hamburg.svg" alt=""></a>
+        <section id="directory" class="navhide">
             <a href="#" class="active btn navbtn">home</a>
             <a href="about-me.html" class="btn navbtn">about me</a>
             <section class="dropdown">
@@ -22,16 +24,11 @@
                     <a class="btn" href="projects/eecu.html">EECU</a>
                     <a class="btn" href="projects/titans-legacy.html">Titan's Legacy</a>
 
-
-                    <!-- Add more projects as needed -->
                 </section>
             </section>
-            <a href="#" class="btn navbtn">resume</a>
-            <a href="index.html#getincontact" class="btn navbtn">contact me</a>
+            <a href="resume.html" class="btn navbtn">resume</a>
+            <a href="index.html#cntc" class="btn navbtn">contact me</a>
 
-        </section>
-        <section id="navopen">
-            
         </section>
     </nav>
     <main>
@@ -132,21 +129,23 @@
             </section>
             <a href="resume.html" class="caps btn navbtn">what else can I do?</a>
         </section>
-        <section id="cntc" class="flex column">
-            <h2 id="getincontact" class="neon caps">Get in <em>contact</em></h2>
-            <hr>
-            <section class="cntcs flex">
-                <section class="contact-item flex">
-                    <img src="assets/mail.svg" alt="email">
-                    <p>isaac.lay25@gmail.com</p>
-                </section>
-                <section class="contact-item flex">
-                    <img src="assets/github.svg" alt="github">
-                    <!-- Subject to change if i decide to transfer all my stuff over -->
-                    <p>ILCart</p>
+        <a href="mailto:isaac.lay25@gmail.com" id="contactopen">
+            <section id="cntc" class="flex column">
+                <h2 id="getincontact" class="neon caps">Get in <em>contact</em></h2>
+                <hr>
+                <section class="cntcs flex">
+                    <section class="contact-item flex">
+                        <img src="assets/mail.svg" alt="email">
+                        <p>isaac.lay25@gmail.com</p>
+                    </section>
+                    <section class="contact-item flex">
+                        <img src="assets/github.svg" alt="github">
+                        <!-- Subject to change if i decide to transfer all my stuff over -->
+                        <p>ILCart</p>
+                    </section>
                 </section>
             </section>
-        </section>
+        </a>
         <footer class="flex column">
 
             <section id="thx" class="plyfrdspy hscroller flex nw caps">

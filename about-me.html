@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+
     <script src="js/abt-me.js"></script>
     <script src="js/uni.js"></script>
     <title>About Me</title>
 </head>
 
 <body>
-    <nav class="flex neon">
-        <section class="flex" id="directory">
-            <a href="index.html" class="active btn navbtn">home</a>
-            <a href="#" class="btn navbtn">about me</a>
-            <!-- <a href="projects.html" id="projectsnav" class="btn navbtn">projects</a> -->
+    <nav class="neon">
+        <a href="#" id="menuopen"><img src="assets/hamburg.svg" alt=""></a>
+        <section id="directory" class="navhide">
+            <a href="#" class="active btn navbtn">home</a>
+            <a href="about-me.html" class="btn navbtn">about me</a>
             <section class="dropdown">
                 <a href="projects.html" id="projectsnav" class="btn navbtn">projects</a>
                 <section class="dropdown-content">
@@ -23,13 +25,14 @@
                     <a class="btn" href="projects/eecu.html">EECU</a>
                     <a class="btn" href="projects/titans-legacy.html">Titan's Legacy</a>
 
-
-                    <!-- Add more projects as needed -->
                 </section>
             </section>
+            <a href="resume.html" class="btn navbtn">resume</a>
+            <a href="index.html#cntc" class="btn navbtn">contact me</a>
 
         </section>
     </nav>
+    
     <header id="abthead" class="flex">
         <img src="assets/aboutme/isaac-lay.webp" alt="isaac lay">
         <section>

@@ -4,20 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="/nav.css">
+
     <title>Titan's Legacy</title>
 </head>
 
 <body>
+    <nav class="neon">
+        <a href="#" id="menuopen"><img src="assets/hamburg.svg" alt=""></a>
+        <section id="directory" class="navhide">
+            <a href="../index.html" class="btn navbtn">home</a>
+            <a href="../about-me.html" class="btn navbtn">about me</a>
+            <section class="dropdown">
+                <a href="../projects.html" id="projectsnav" class="btn navbtn">projects</a>
+                <section class="dropdown-content">
+                    <a class="btn" href="prehistoric-pours.html">Prehistoric Pours</a>
+                    <a class="btn" href="eecu.html">EECU</a>
+                    <a class="btn" href="titans-legacy.html">Titan's Legacy</a>
+
+                </section>
+            </section>
+            <a href="../resume.html" class="btn navbtn">resume</a>
+            <a href="../index.html#cntc" class="btn navbtn">contact me</a>
+
+        </section>
+    </nav>
     <main>
-        <h1>Digital Board Game<br>Titan's Legacy</h1>
-        <figure>
-            <img src="/assets/projects/tl2.png" alt="landing page">
-            <figcaption>CSS | JS | HTML | GITHUB | VS CODE | FIGMA | PIXI JS | HONEYCOMB.JS | CANVAS</figcaption>
-        </figure>
-        <p>For our final project of our last semester at CART we were asked to create a digital board game but with a twist. We decided to create a Catan-like game but instead of rolling dice to get resources you would have to fight enemies. There were so many challenges to what we were trying to do first and the most detrimental was our bad planning and pacing. We had another project due at the same time as this one and with that many of our members focused on the other project before this one. Another thing was that a lot of the work that was done, was done within one week. Our communication was only effective when the pressure was that high but we persevered through all of that and together we crafted a semi-working game.</p>
-        <img src="/assets/projects/tl1.png" alt="">
-        <img src="/assets/projects/tl3.png" alt="">
+        <header>
+        <h1 class="plyfrdspysc">Cart Web App <br><em>Titan's Legacy</em></h1>
+        <a href="https://titanslegacy.netlify.app/" target="_blank">
+            <section id="topimgcontainer" class="flex">
+                <figure id="topimage" class="fig">
+                    <img src="/assets/projects/tl2.png" alt="landing page">
+                    <figcaption>CSS | JS | HTML | GITHUB | VS CODE | FIGMA</figcaption>
+                </figure>
+            </section>
+        </a>
+        </header>
+        <p id="desc">For our final project of our last semester at CART we were asked to create a digital board game but with a twist. We decided to create a Catan-like game but instead of rolling dice to get resources you would have to fight enemies. There were so many challenges to what we were trying to do first and the most detrimental was our bad planning and pacing. We had another project due at the same time as this one and with that many of our members focused on the other project before this one. Another thing was that a lot of the work that was done, was done within one week. Our communication was only effective when the pressure was that high but we persevered through all of that and together we crafted a semi-working game.</p>
+        <section id="gallery" class="flex">
+            <figure class="fig galleryprjct">
+                <img src="/assets/projects/tl1.png" alt="">
+            </figure>
+
+            <figure class="fig galleryprjct">
+                <img src="/assets/projects/tl3.png" alt="">
+            </figure>
+
+        </section>
     </main>
 </body>
 

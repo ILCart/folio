@@ -26,19 +26,26 @@ function init_carousels(){
         })
     }
 }
-let gallery = false;
+// let gallery = false;
+function clear_gallery(gallery){
+    let children = gallery.children;
+    for (const child of children) {
+        child.style.width = "";
+        child.style.height = "";
+    }
+}
+let opened = false;
+let last;
 function apply_gallery_events(gallery){
     let children = gallery.children;
     for (const child of children) {
         child.addEventListener("click",()=>{
-            if(gallery){
-                child.style.width = ""
-            child.style.height = ""
-            }else{
-                child.style.width = "50vw"
-            child.style.height = "100%"
+            clear_gallery(gallery);
+            if(opened || last != child){
+                child.style.width = "30vw";
+                last = child;
             }
-            gallery = !gallery;
+            opened = !opened;
         })
     }
 }

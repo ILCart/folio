@@ -5,95 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
     <title>Projects</title>
 </head>
 
 <body>
+    <nav class="neon">
+        <a href="#" id="menuopen"><img src="assets/hamburg.svg" alt=""></a>
+        <section id="directory" class="navhide">
+            <a href="#" class="active btn navbtn">home</a>
+            <a href="about-me.html" class="btn navbtn">about me</a>
+            <section class="dropdown">
+                <a href="projects.html" id="projectsnav" class="btn navbtn">projects</a>
+                <section class="dropdown-content">
+                    <a class="btn" href="projects/prehistoric-pours.html">Prehistoric Pours</a>
+                    <a class="btn" href="projects/eecu.html">EECU</a>
+                    <a class="btn" href="projects/titans-legacy.html">Titan's Legacy</a>
+
+                </section>
+            </section>
+            <a href="resume.html" class="btn navbtn">resume</a>
+            <a href="index.html#cntc" class="btn navbtn">contact me</a>
+
+        </section>
+    </nav>
     <main>
-        <h1 class="plyfrdspysc caps" id="projecthero">
+        <h1 class="plyfrdspysc caps flex" id="projecthero">
             <em>All my projects</em>
         </h1>
         <section class="projectcard flex">
-            <section class="projectcardcontainer flex">
-                <section class="prjcinfo flex">
-                    <h3></h3>
-                    <p>A multipaged website built for a cafe inside Jurassic Park. In my Honors English 11 class at
-                        <abbr title="The Center For Advanced Research and Technology">CART</abbr> we read the book
-                        <em>Jurassic
-                            Park</em>. For our final project of that semester we were tasked with creating a website for
-                        a cafe
-                        inside of the park.
-                    </p>
-                    <a href="projects/prehistoricpours.html" class="btn">see more</a>
-                </section>
-                <figure>
-                    <!-- prolly make this a carousel -->
-                    <img src="assets/projects/prepour-home.png" alt="prehistoric pours">
-                    <figcaption>
-                        <h1 class="caps plyfrdspysc">Jurassic Park \\ Prehistoric pours</h1>
-                    </figcaption>
-                </figure>
+            <section class="overlayprojecttitle flex">
+                <h2 class="plyfrdspysc">
+                    Prehistoric Pours
+                </h2>
+                <h3 class="plyfrdspysc">Jurassic Park</h3>
             </section>
+
+            <a href="projects/prehistoric-pours.html" class="projectcardcontainer flex">
+                    <figure class="fig">
+                        <img src="assets/projects/prepour-logo2.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/prepour-menu.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/prepour-footer.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/prepour-cart.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/prepour-popup.png" alt="prehistoric pours">
+                    </figure>
+            </a>
         </section>
         <section class="projectcard flex">
-            <section class="projectcardcontainer flex">
-
-                <section class="prjcinfo flex">
-                    <h3></h3>
-                    <p>A monthly budget calculator created for EECU. This project came about when, at <abbr
-                            title="">CART</abbr>, EECU presented to us how to budget with certain salaries. This
-                        prompted
-                        the
-                        request from them to create a budget calculator.</p>
-                    <a href="projects/prehistoricpours.html" class="btn">see more</a>
-                </section>
-                <figure>
-                    <img src="assets/projects/eecu-breakdown.png" alt="EECU Budget Calculator">
-                    <figcaption>
-                        <h1 class="caps plyfrdspysc">EECU \\ Budget calculator</h1>
-                    </figcaption>
-                </figure>
+            <section class="overlayprojecttitle flex">
+                <h2 class="plyfrdspysc">
+                    Budget Calculator
+                </h2>
+                <h3 class="plyfrdspysc">EECU</h3>
             </section>
 
+            <a href="projects/eecu.html" class="projectcardcontainer flex">
+                    <figure class="fig">
+                        <img src="assets/projects/eecu-logo.jpg" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/eecu-breakdown.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/eecu-careers.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/eecu-input.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/eecu-table.png" alt="prehistoric pours">
+                    </figure>
+                    
+            </a>
         </section>
         <section class="projectcard flex">
-            <section class="projectcardcontainer flex">
-
-                <section class="prjcinfo flex">
-                    <h3></h3>
-                    <p>A research essay on how Chaos as shown in <em>Jurassic Park</em> can be applied to the real
-                        world.
-                    </p>
-                    <a href="assets/jpessay.pdf" class="btn">see more</a>
-                </section>
-                <figure>
-                    <!-- <img src="assets/projects/eecu-breakdown.png" alt="EECU Budget Calculator"> -->
-                    <figcaption>
-                        <h1 class="caps plyfrdspysc">Jurassic Park \\ Research Essay</h1>
-                    </figcaption>
-                </figure>
+            <section class="overlayprojecttitle flex">
+                <h2 class="plyfrdspysc">
+                    Titan's Legacy
+                </h2>
+                <h3 class="plyfrdspysc">CART Web App</h3>
             </section>
 
+            <a href="projects/titans-legacy.html" class="projectcardcontainer flex">
+                    <figure class="fig">
+                        <img src="assets/projects/tllogo.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/tl1.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/tl2.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/tl3.png" alt="prehistoric pours">
+                    </figure>
+                    <figure class="fig">
+                        <img src="assets/projects/tlboard.png" alt="prehistoric pours">
+                    </figure>  
+            </a>
         </section>
         <section class="projectcard flex">
-            <section class="projectcardcontainer flex">
-
-                <section class="prjcinfo flex">
-                    <h3></h3>
-                    <p>An arugmentative essay on why an device such as the OASIS from <em>Ready Player One</em> in the
-                        real
-                        world would not be benifical to human kind.</p>
-                    <a href="assets/rpoessay.pdf" class="btn">see more</a>
-                </section>
-                <figure>
-                    <img src="assets/projects/eecu-breakdown.png" alt="EECU Budget Calculator">
-                    <figcaption>
-                        <h1 class="caps plyfrdspysc">Ready Player One \\ Argumentative Essay</h1>
-                    </figcaption>
-                </figure>
+            <section class="overlayprojecttitle flex">
+                <h2 class="plyfrdspysc">
+                    APA Jurassic Park Essay
+                </h2>
+                <h3 class="plyfrdspysc">H English 11</h3>
             </section>
 
+            <a href="assets/jpessay.pdf" class="projectcardcontainer flex">
+                <figure class="fig">
+                    <img src="assets/projects/jpapa.png" alt="prehistoric pours">
+                </figure>
+            </a>
         </section>
+
+        <section class="projectcard flex">
+            <section class="overlayprojecttitle flex">
+                <h2 class="plyfrdspysc">
+                    MLA Ready Player One Essay
+                </h2>
+                <h3 class="plyfrdspysc">H English 11</h3>
+            </section>
+
+            <a href="assets/rpoessay.pdf" class="projectcardcontainer flex">
+                <figure class="fig">
+                    <img src="assets/projects/mlarpo.png" alt="prehistoric pours">
+                </figure>
+            </a>
+        </section>
+
 
     </main>
 </body>
